@@ -15,7 +15,7 @@
     <script src="./js/main.js" defer></script>
     <title>Document</title>
 </head>
-<body>
+<body> 
 <div id="app">
     <header class="p-1">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png" alt="">
@@ -23,13 +23,13 @@
       <main>
         <div class="container-lg">
             <div class="row g-4 justify-content-center position-relative">
-                <div class="single-card col-2 mx-3 p-2 text-center">
-                    <img :src="card.poster" alt="">
+                <div class="single-card col-2 mx-3 p-2 text-center" v-for="album in albums">
+                    <img :src="album.poster" alt="">
                         <p>
-                            {{card.title}}
+                            {{album.title}}
                         </p>
-                        <p> {{card.author}} </p>
-                        <p>{{card.genre}}</p>
+                        <p> {{album.author}} </p>
+                        <p>{{album.genre}}</p>
                     </div>
                 </div>
             </div>
