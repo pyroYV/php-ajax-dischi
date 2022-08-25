@@ -1,3 +1,7 @@
+<?php
+include __DIR__. '/backend/db.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,17 +27,19 @@
       <main>
         <div class="container-lg">
             <div class="row g-4 justify-content-center position-relative">
+                <?php foreach($albums as $album){?>
                 <div class="single-card col-2 mx-3 p-2 text-center">
-                    <img :src="card.poster" alt="">
-                        <p>
-                            {{card.title}}
-                        </p>
-                        <p> {{card.author}} </p>
-                        <p>{{card.genre}}</p>
-                    </div>
+                <img src=" <?php echo $album['poster'] ?> " alt="">
+                    <p>
+                        <?php echo $album['title']?>
+                    </p>
+                    <p> <?php echo $album['author']?> </p>
+                    <p> <?php echo $album['genre']?></p>
+                </div>
+                <?php } ?>
+            </div>
                 </div>
             </div>
-        </div>
       </main>
 </div>
 </body>
