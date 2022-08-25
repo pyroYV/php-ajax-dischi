@@ -22,6 +22,19 @@
       </header>
       <main>
         <div class="container-lg">
+            <div class="row">
+                <div class="col-4 py-4">
+                <select v-model="selectedGenre">
+                    <option value="">All</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Metal">Metal</option>
+                </select>
+                <input type="submit" @click="GetGenres()">
+                </div>
+
+            </div>
             <div class="row g-4 justify-content-center position-relative">
                 <div class="single-card col-2 mx-3 p-2 text-center" v-for="album in albums">
                     <img :src="album.poster" alt="">

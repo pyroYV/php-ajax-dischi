@@ -3,18 +3,26 @@ const app = new Vue({
     data() {
         return {
             albums:[],
-            try:'ciao'
+            selectedGenre:'',
 
         }
     },
     methods: {
         ApiCall(){
-            axios.get('http://localhost/php-ajax-dischi/backend/controller.php')
-            .then(results => {
-                this.albums = results.data.results.data
+                axios.get('http://localhost/php-ajax-dischi/backend/controller.php?')
+                .then(results => {
+                    this.albums = results.data
+                    console.log(this.albums)
+                })
+        },
+        GetGenres(){
+            axios.get('http://localhost/php-ajax-dischi/backend/controller.php?genre=' + this.selectedGenre)
+            .then(results=>{
+                this.albums = results.data
                 console.log(this.albums)
             })
         }
+
     },
     created() {
         this.ApiCall()
