@@ -15,7 +15,7 @@
             'genre' => 'Pop'
         ],
         [
-            'title' => 'Ten's Summoner's Tales',
+            'title' => "Tens Summoner's Tales",
             'author' => 'Sting',
             'year' => 1993,
             'poster' => 'https://images-na.ssl-images-amazon.com/images/I/411BQR6BHRL.jpg',

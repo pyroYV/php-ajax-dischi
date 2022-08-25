@@ -1,0 +1,21 @@
+header{
+    background-color: #2e3a46;
+    height: 90px;}
+header>img{
+    height: 50px;
+}
+main{
+    background-color: #1e2d3b; 
+    height: calc(100vh);
+}
+
+
+.single-card{
+    color:white;
+    background-color: #2e3a46;
+    
+}
+.single-card>img{
+    height: 200px;
+    width: 200px;
+}
